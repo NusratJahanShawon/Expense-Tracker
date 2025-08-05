@@ -1,3 +1,59 @@
+#---------------Adding Expenses---------
+import json
+
+# Initialize the file path
+EXPENSE_FILE = 'expenses.json'
+
+# Function to load expenses from the file
+def load_expenses():
+    try:
+        with open(EXPENSE_FILE, 'r') as file:
+            expenses = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        expenses = []
+    return expenses
+
+# Function to save expenses to the file
+def save_expenses(expenses):
+    with open(EXPENSE_FILE, 'w') as file:
+        json.dump(expenses, file, indent=4)
+
+# Function to add a new expense
+def add_expense():
+    name = input("Enter expense name: ")
+    category = input("Enter expense category (e.g., Food, Transport): ")
+    while True:
+        try:
+            amount = float(input("Enter expense amount: "))
+            break
+        except ValueError:
+            print("Invalid input! Please enter a valid number for the amount.")
+    
+    expense = {
+        'name': name,
+        'category': category,
+        'amount': amount
+    }
+    
+    # Load existing expenses
+    expenses = load_expenses()
+    
+    # Add the new expense
+    expenses.append(expense)
+    
+    # Save the updated expenses
+    save_expenses(expenses)
+    
+    print(f"Expense '{name}' added successfully!")
+
+
+
+
+
+
+
+
+
 def show_menu():
     print("\n--- Expense Tracker ---")
     print("1. Add Expense")
