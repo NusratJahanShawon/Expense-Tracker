@@ -1,4 +1,3 @@
-#---------------Adding Expenses---------
 import json
 
 # Initialize the file path
