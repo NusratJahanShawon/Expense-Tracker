@@ -4,7 +4,7 @@ import json
 # Initialize the file path
 EXPENSE_FILE = 'expenses.json'
 
-# Function to load expenses from the file
+# load expenses from the file
 def load_expenses():
     try:
         with open(EXPENSE_FILE, 'r') as file:
@@ -13,15 +13,15 @@ def load_expenses():
         expenses = []
     return expenses
 
-# Function to save expenses to the file
+# save expenses to the file
 def save_expenses(expenses):
     with open(EXPENSE_FILE, 'w') as file:
         json.dump(expenses, file, indent=4)
 
-# Function to add a new expense
+#------ Add a new expense------
 def add_expense():
     name = input("Enter expense name: ")
-    category = input("Enter expense category (e.g., Food, Transport): ")
+    category = input("Enter expense items : ")
     while True:
         try:
             amount = float(input("Enter expense amount: "))
@@ -46,7 +46,19 @@ def add_expense():
     
     print(f"Expense '{name}' added successfully!")
 
+#------ View all expenses------
+def view_expenses():
+    expenses = load_expenses()
+    
+    if not expenses:
+        print("No expenses found.")
+        return
+    
+    print("\n--- Expense List ---")
+    for expense in expenses:
+        print(f"Name: {expense['name']}, Category: {expense['category']}, Amount: ${expense['amount']:.2f}")
 
+#------ Edit an existing expense------
 
 
 
