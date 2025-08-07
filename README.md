@@ -1,18 +1,18 @@
-🧾 Expense Tracker (Command-Line App)
-A simple Python-based command-line expense tracker that allows users to add, view, edit, delete, and summarize their expenses. All data is stored in a local JSON file (expenses.json), making it lightweight and easy to use.
+# 🧾 Expense Tracker (Command-Line App)
 
-📌 Features
-✅ Add new expenses with name, category, and amount
+A simple Python-based command-line expense tracker that allows users to **add**, **view**, **edit**, **delete**, and **summarize** their expenses.  
+All data is stored in a local JSON file (`expenses.json`), making it lightweight and easy to use.
 
-📋 View all expenses in a formatted list
+---
 
-✏️ Edit existing expenses
+## 📌 Features
 
-🗑️ Delete expenses by name
+- ✅ **Add** new expenses with name, category, and amount  
+- 📋 **View** all expenses in a formatted list  
+- ✏️ **Edit** existing expenses  
+- 🗑️ **Delete** expenses by name  
+- 💰 **Show** total monthly expense  
+- 💾 **Data persistence** using JSON  
+- 🧠 **Input validation** and error handling  
 
-💰 Show total monthly expense
-
-💾 Data persistence using JSON
-
-🧠 Input validation and error handling
-
+---
