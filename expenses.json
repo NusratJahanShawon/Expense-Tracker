@@ -2,6 +2,13 @@
     {
         "name": "Clothing",
         "category": "shirt",
-        "amount": 1000.0
+        "amount": 1000.0,
+        "date": "2024-12-19"
+    },
+    {
+        "name": "toy",
+        "category": "doll,train,ball",
+        "amount": 2600.0,
+        "date": "2025-08-11"
     }
 ]
