@@ -10,5 +10,11 @@
         "category": "doll,train,ball",
         "amount": 2600.0,
         "date": "2025-08-11"
+    },
+    {
+        "name": "food",
+        "category": "apple,orange,mango",
+        "amount": 500.0,
+        "date": "2025-08-11"
     }
 ]
